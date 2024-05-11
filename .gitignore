@@ -129,11 +129,15 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# dependencies
-/.pnp
-
-# testing
-/coverage
-
-# production
-/build
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+dist-ssr
+*.local
