@@ -1,6 +1,5 @@
 import React from "react";
 import SideBar from "./SideBar";
-import Search from "./search";
 
 const Layout = ({ children }) => {
   return (
@@ -9,8 +8,7 @@ const Layout = ({ children }) => {
         <SideBar />
       </div>
       <div className="ml-48">
-        <Search />
-        <div className="p-5 bg-[#FCFAFC] h-screen">{children}</div>
+        <div className="p-5 bg-[#FCFAFC] min-h-screen">{children}</div>
       </div>
     </div>
   );

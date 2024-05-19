@@ -3,13 +3,17 @@ import { GoHome } from "react-icons/go";
 import { RxDashboard } from "react-icons/rx";
 import { BsPlayBtn } from "react-icons/bs";
 import { Link, useLocation } from "react-router-dom";
+import { MdOutlineAssignment } from "react-icons/md";
 
 const SideBar = () => {
   const location = useLocation();
   const { pathname } = location;
   return (
     <div className="border shadow-md space-y-2 h-screen bg-[#F5F5F5] py-5 px-3">
-      <h1 className="text-black">Logo</h1>
+      <div className="flex items-center gap-4 bg-white rounded-md p-2 mb-10">
+        <MdOutlineAssignment size={48} />
+        <h1 className="text-md font-bold text-gray-800">Vahan Assignment</h1>
+      </div>
       <Link
         to="/"
         className={`flex items-center gap-2 text-md p-4 hover:bg-[#FCFCFC] rounded-lg
