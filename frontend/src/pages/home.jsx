@@ -2,6 +2,16 @@ import React, { useState, useEffect } from "react";
 
 const Home = () => {
   const [users, setUsers] = useState([]);
+  const convert = (dob) => {
+    const d = new Date(dob);
+    const inputdob =
+      d.getDate().toString().padStart(2, "0") +
+      "-" +
+      (d.getMonth() + 1).toString().padStart(2, "0") +
+      "-" +
+      d.getFullYear().toString();
+    return inputdob;
+  };
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -72,7 +82,7 @@ const Home = () => {
                     {user.mobileNumber}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {user.dateOfBirth}
+                    {convert(user.dateOfBirth)}
                   </td>
                 </tr>
               ))}
